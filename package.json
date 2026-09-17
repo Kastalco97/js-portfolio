@@ -4,21 +4,48 @@
   "description": "A minimal portfolio with Vanilla JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "dev": "webpack --watch --config webpack.config.dev.js",
+    "start": "webpack-dev-server --open --mode development",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gndx/js-portfolio.git"
+    "url": "git+"
   },
   "keywords": [
     "javascript",
     "html",
     "css"
   ],
-  "author": "oscar barajas <oscar@gndx.dev>",
+  "author": "Kamilo Alomías <kastalcowork@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gndx/js-portfolio/issues"
+    "url": "https://github.com/Kastalco97/js-portfolio/issues"
   },
-  "homepage": "https://github.com/gndx/js-portfolio#readme"
+  "homepage": "https://github.com/Kastalco97/js-portfolio#readme",
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^8.0.5",
+    "@babel/plugin-transform-runtime": "^8.0.1",
+    "@babel/preset-env": "^8.0.5",
+    "babel-loader": "^10.1.1",
+    "copy-webpack-plugin": "^14.0.0",
+    "css-loader": "^7.1.5",
+    "css-minimizer-webpack-plugin": "^8.0.0",
+    "dotenv-webpack": "^9.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.8",
+    "mini-css-extract-plugin": "^2.10.2",
+    "stylus": "^0.64.0",
+    "stylus-loader": "^9.0.0",
+    "terser-webpack-plugin": "^5.6.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.111.0",
+    "webpack-cli": "^7.2.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "^8.0.5"
+  }
 }

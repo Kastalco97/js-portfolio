@@ -1,0 +1,9 @@
+{
+    "presets":[
+        "@babel/preset-env" // Allows works with modern JS
+    ],
+    "plugins":[
+        "@babel/plugin-transform-runtime" // Manages async/await and asynchronism in JS
+    ]
+}
+
